@@ -18,7 +18,7 @@ int CountCharacter(string text, char target)
         }
     }
     return count;
-} 
+}
 
 Console.WriteLine(CountCharacter("мама", 'м'));
 Console.WriteLine(CountCharacter("Код 2026", ' '));
@@ -50,9 +50,10 @@ int CountDigits(string text)
         }
     }
     return count;
-} 
+}
 
-int CountLetters(string text){
+int CountLetters(string text)
+{
     int count = 0;
 
     foreach (char symbol in text)
@@ -61,7 +62,7 @@ int CountLetters(string text){
         {
             count++;
         }
-    } 
+    }
     return count;
 }
 
@@ -85,14 +86,15 @@ Console.WriteLine(CountLetters("Код 2026!"));
 // Console.WriteLine(CountDigits("A2B3"));
 
 //5. Поиск символа и его индекса
-int FindCharacterIndex(string text, char target){
+int FindCharacterIndex(string text, char target)
+{
     for (int i = 0; i < text.Length; i++)
     {
         if (text[i] == target)
         {
             return i;
         }
-    } 
+    }
     return -1;
 }
 
@@ -115,4 +117,23 @@ Console.WriteLine(FindCharacterIndex("", 'a'));
 //     }
 //     return index;
 // } 
+
+//6. Преобразование строк
+string sample = " Привет, C#! ";
+string trimmed = sample.Trim();
+string upper = sample.ToUpper();
+string lower = sample.ToLower();
+string replaced = sample.Replace(' ', '_');
+Console.WriteLine($"Исходная: [{sample}]");
+Console.WriteLine($"Без пробелов по краям: [{trimmed}]");
+Console.WriteLine($"Верхний регистр: [{upper}]");
+Console.WriteLine($"Нижний регистр: [{lower}]");
+Console.WriteLine($"Замена пробелов: [{replaced}]");
+
+//Найдите ошибку: результат преобразования
+// string sample = " кот ";
+// sample = sample.Trim();
+// Console.WriteLine($"[{t}]");
+
+//7. Разделение строки на слова
 
