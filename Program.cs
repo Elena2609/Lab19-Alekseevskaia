@@ -112,3 +112,15 @@ if (index == -1){
     Console.WriteLine($"Первый индекс: {index}");
 } 
 
+//13. Самостоятельное задание
+int CountWordsManually(string text){
+    int count = 0;
+    for (int i = 0; i < text.Length; i++){
+        if (text[i] != ' ' && (i == 0 || text[i-1] == ' ')){
+            count++;
+        }
+    } 
+    return count;
+} 
+
+Console.WriteLine($"Слова без Split(): {CountWordsManually(text)}");
